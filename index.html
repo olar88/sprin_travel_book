@@ -1,0 +1,785 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🌸日月潭與九族賞櫻</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Serif+TC:wght@400;600;900&family=Noto+Sans+TC:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              oatmeal: "#F9F8F6",
+              charcoal: "#2C2C2C",
+              "sky-blue": "#C0D0E7",
+              "dusty-rose": "#D8C3C3",
+              sage: "#97AF8F",
+              stone: "#E2E0D9",
+            },
+            fontFamily: {
+              serif: ['"Cormorant Garamond"', '"Noto Serif TC"', "serif"],
+              sans: ['"Noto Sans TC"', "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        scroll-behavior: smooth;
+        background: #F9F8F6;
+        background: linear-gradient(180deg, #F9F8F6 0% ,rgba(192, 208, 231, 0.606) 40%, rgba(234, 203, 209, 0.603) 62%,#F9F8F6 100% );
+      }
+      /* 建築感圓拱門遮罩 */
+      .arch-image {
+        border-radius: 200px 200px 0 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+      /* 雜誌風細線 */
+      .hairline {
+        height: 1px;
+        background-color: theme("colors.charcoal");
+        opacity: 0.2;
+      }
+      .fade-in-up {
+        animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* 滾動浮現動畫 (Scroll Reveal) */
+      .reveal-on-scroll {
+        opacity: 0;
+        transform: translateY(40px);
+        transition:
+          opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: opacity, transform;
+      }
+      .reveal-on-scroll.is-revealed {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-oatmeal text-charcoal antialiased selection:bg-dusty-rose selection:text-white pb-24"
+  >
+    <!-- Hero Section -->
+    <header
+      class="relative min-h-[85vh] flex items-center justify-center px-6 overflow-hidden"
+    >
+      <div class="absolute inset-0 z-0 opacity-40">
+        <img
+          src="https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&w=1600&q=70"
+          alt=""
+          class="w-full h-full object-cover blur-sm scale-105"
+        />
+      </div>
+      <div
+        class="relative z-10 text-center fade-in-up flex flex-col items-center"
+      >
+        <span
+          class="text-xs uppercase tracking-[0.3em] text-gray-500 mb-6 font-sans"
+          >A Family Retreat · March 1-2, 2026</span
+        >
+        <h1
+          class="font-serif text-5xl md:text-7xl lg:text-8xl font-black text-charcoal leading-tight mb-6"
+        >
+          Spring <br />
+          <span class="italic font-light text-dusty-rose">Escape.</span>
+        </h1>
+        <p
+          class="font-sans text-lg md:text-xl text-gray-600 max-w-md mx-auto leading-relaxed"
+        >
+          日月潭的靜謐與九族的春櫻，春日週末慢活提案。
+        </p>
+        <div class="mt-12 w-px h-24 bg-charcoal opacity-30 mx-auto"></div>
+      </div>
+    </header>
+
+    <!-- Content Wrapper -->
+    <main class="max-w-6xl mx-auto px-6 lg:px-12 mt-12 space-y-32">
+      <!-- Day 1 -->
+      <section
+        class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-center"
+      >
+        <div class="lg:col-span-5 order-2 lg:order-1 h-[60vh] relative">
+          <img
+            src="https://images.unsplash.com/photo-1719340198760-434a1763b3ac?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+            class="arch-image shadow-2xl"
+          />
+          <div
+            class="absolute -bottom-6 -right-6 w-32 h-32 bg-sage rounded-full mix-blend-multiply opacity-60"
+          ></div>
+        </div>
+
+        <div class="lg:col-span-7 order-1 lg:order-2">
+          <div class="flex items-baseline space-x-4 mb-8">
+            <span class="font-serif text-5xl md:text-6xl text-dusty-rose"
+              >01</span
+            >
+            <h2 class="font-serif text-3xl md:text-4xl font-semibold">
+              Sun Moon Lake 🌙
+            </h2>
+          </div>
+          <div class="hairline mb-8"></div>
+
+          <div class="space-y-8 font-sans">
+            <!-- Event 1 -->
+            <div class="grid grid-cols-[1fr_3fr] gap-4">
+              <div
+                class="text-sm tracking-wider font-semibold text-gray-500 pt-1"
+              >
+                <span class="text-rose-300">10:39</span> - 11:18
+              </div>
+              <div>
+                <h3 class="text-xl font-serif font-bold mb-2">
+                  高鐵 121 次抵達台中
+                </h3>
+              </div>
+            </div>
+
+            <!-- Event 2 -->
+            <div class="grid grid-cols-[1fr_3fr] gap-4">
+              <div
+                class="text-sm tracking-wider font-semibold text-dusty-rose pt-1"
+              >
+                12:00 - 14:00
+              </div>
+              <div>
+                <h3 class="text-xl font-serif font-bold mb-2">
+                  午餐約會：台中聚餐
+                </h3>
+                <p
+                  class="text-gray-600 font-light text-sm leading-relaxed mb-4"
+                >
+                  🚗
+                  <strong class="text-charcoal font-medium"
+                    >車程預估：高鐵站至市區餐廳約 15-20 分鐘。</strong
+                  ><br />
+                  預算抓在 5 人約 6,000-7,000
+                  元，挑選了幾間環境漂亮、爸媽也會喜歡的質感餐廳：
+                </p>
+                <ul class="space-y-3 text-sm font-light text-gray-700">
+                  <li class="flex items-start group pr-4">
+                    <span class="mr-2 text-dusty-rose shrink-0">✦</span>
+                    <span class="flex-1"
+                      ><strong class="font-normal text-charcoal"
+                        >與玥樓頂級粵菜</strong
+                      >
+                      — 裝潢大氣、採光極佳，烤鴨必點。</span
+                    >
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=與玥樓頂級粵菜"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="ml-3 text-gray-400 hover:text-dusty-rose transition-colors shrink-0"
+                      title="在 Google Maps 上查看"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-4 h-4"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                        />
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="flex items-start group pr-4">
+                    <span class="mr-2 text-dusty-rose shrink-0">✦</span>
+                    <span class="flex-1"
+                      ><strong class="font-normal text-charcoal"
+                        >膳馨民間創意料理</strong
+                      >
+                      — 米其林必比登推薦，家常台菜的精緻演繹。</span
+                    >
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=膳馨民間創意料理"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="ml-3 text-gray-400 hover:text-dusty-rose transition-colors shrink-0"
+                      title="在 Google Maps 上查看"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-4 h-4"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                        />
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="flex items-start group pr-4">
+                    <span class="mr-2 text-dusty-rose shrink-0">✦</span>
+                    <span class="flex-1"
+                      ><strong class="font-normal text-charcoal">沁園春</strong>
+                      — 經典江浙點心，適合懷舊的長輩胃口。</span
+                    >
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=沁園春+台中"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="ml-3 text-gray-400 hover:text-dusty-rose transition-colors shrink-0"
+                      title="在 Google Maps 上查看"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-4 h-4"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                        />
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Event 3 -->
+            <div class="grid grid-cols-[1fr_3fr] gap-4">
+              <div
+                class="text-sm tracking-wider font-semibold text-gray-500 pt-1"
+              >
+                15:00 - 16:15
+              </div>
+              <div>
+                <div class="mb-2 flex items-top">
+                  <h3 class="text-xl font-serif font-bold mb-0">
+                    喝喝茶 Hohocha 品茗
+                  </h3>
+                  <a
+                    href="https://maps.app.goo.gl/Gzsd6Gtt83neeKFt7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="ml-3 text-gray-400 hover:text-dusty-rose transition-colors shrink-0"
+                    title="在 Google Maps 上查看"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <p class="text-gray-600 font-light text-sm leading-relaxed">
+                  🚗
+                  <strong class="text-charcoal font-medium"
+                    >車程預估：台中市區至南投魚池約 1 小時 15 分鐘。</strong
+                  ><br />
+                  抵達南投後，先去喝杯紅玉紅茶、茶味冰淇淋、吃點茶葉蛋，在日式木造建築裡休息片刻，舒緩拉車的疲勞。
+                </p>
+              </div>
+            </div>
+
+            <!-- Event 4 -->
+            <div class="grid grid-cols-[1fr_3fr] gap-4">
+              <div
+                class="text-sm tracking-wider font-semibold text-gray-500 pt-1"
+              >
+                16:30 - 18:00
+              </div>
+              <div>
+                <div class="mb-2 flex items-top">
+                  <h3 class="text-xl font-serif font-bold mb-0">
+                    湖畔漫步與腳踏車
+                  </h3>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=日月潭水社碼頭"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="ml-3 text-gray-400 hover:text-dusty-rose transition-colors shrink-0"
+                    title="在 Google Maps 上查看"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <p class="text-gray-600 font-light text-sm leading-relaxed">
+                  🚗
+                  <strong class="text-charcoal font-medium"
+                    >車程預估：喝喝茶至水社碼頭約 10 分鐘。</strong
+                  ><br />
+                  趁著傍晚氣溫涼爽，一起在水社碼頭走走涵碧步道，或是租借電動腳踏車沿著最美自行車道享受日落前的靜謐湖景。
+                </p>
+              </div>
+            </div>
+
+            <!-- Event 5 -->
+            <div class="grid grid-cols-[1fr_3fr] gap-4">
+              <div
+                class="text-sm tracking-wider font-semibold text-dusty-rose pt-1"
+              >
+                18:30 - 20:00
+              </div>
+              <div>
+                <div class="mb-2 flex items-top">
+                  <h3 class="text-xl font-serif font-bold mb-2">
+                    在地晚餐與入住
+                  </h3>
+                  <a
+                    href="https://maps.app.goo.gl/n2xKt24aNjYFbVRx5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="ml-3 text-gray-400 hover:text-sage transition-colors shrink-0"
+                    title="在 Google Maps 上查看"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <p class="text-gray-600 font-light text-sm leading-relaxed">
+                  於魚池鄉或水社碼頭附近享用在地邵族風味料理，隨後前往 <br />
+                  ・承億文旅 潭日月・飯店 Check-in 休息。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Day 2 -->
+      <section
+        class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-center"
+      >
+        <div class="lg:col-span-7">
+          <div class="flex items-baseline space-x-4 mb-8">
+            <span class="font-serif text-5xl md:text-6xl text-sage">02</span>
+            <h2 class="font-serif text-3xl md:text-4xl font-semibold">
+              Sakura Blooms
+            </h2>
+          </div>
+          <div class="hairline mb-8"></div>
+
+          <div class="space-y-8 font-sans">
+            <!-- Event 0 (Breakfast) -->
+            <div class="grid grid-cols-[1fr_3fr] gap-4">
+              <div class="text-sm tracking-wider font-semibold text-sage pt-1">
+                08:00 - 09:00
+              </div>
+              <div>
+                <h3 class="text-xl font-serif font-bold mb-2">
+                  晨喚與陽光早餐
+                </h3>
+                <p class="text-gray-600 font-light text-sm leading-relaxed">
+                  早安！在飯店享用豐盛的早餐，喝杯熱咖啡，悠哉地開啟賞櫻日。
+                </p>
+              </div>
+            </div>
+
+            <!-- Event 1 -->
+            <div class="grid grid-cols-[1fr_3fr] gap-4">
+              <div
+                class="text-sm tracking-wider font-semibold text-gray-500 pt-1"
+              >
+                09:30 - 10:00
+              </div>
+              <div>
+                <div class="mb-2 flex items-top">
+                  <h3 class="text-xl font-serif font-bold mb-0">
+                    九族文化村：搭乘纜車
+                  </h3>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=九族文化村"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="ml-3 text-gray-400 hover:text-sage transition-colors shrink-0"
+                    title="在 Google Maps 上查看"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <p class="text-gray-600 font-light text-sm leading-relaxed">
+                  🚗
+                  <strong class="text-charcoal font-medium"
+                    >車程預估：飯店出發至九族約 15-20 分鐘。</strong
+                  ><br />
+                  趁著一早人少入園，直接搭乘九族纜車直達山頂觀山樓。
+                </p>
+              </div>
+            </div>
+
+            <!-- Event 2 -->
+            <div class="grid grid-cols-[1fr_3fr] gap-4">
+              <div
+                class="text-sm tracking-wider font-semibold text-gray-500 pt-1"
+              >
+                10:00 - 12:30
+              </div>
+              <div>
+                <h3 class="text-xl font-serif font-bold mb-2">
+                  漫步櫻花林與部落劇場
+                </h3>
+                <p class="text-gray-600 font-light text-sm leading-relaxed">
+                  從山頂沿著櫻花步道慢慢散步下來，途中可順道觀賞原住民娜魯灣劇場表演。
+                </p>
+              </div>
+            </div>
+
+            <!-- Event 3 -->
+            <div class="grid grid-cols-[1fr_3fr] gap-4">
+              <div
+                class="text-sm tracking-wider font-semibold text-gray-500 pt-1"
+              >
+                12:30 - 14:00
+              </div>
+              <div>
+                <h3 class="text-xl font-serif font-bold mb-2">
+                  園內午餐與小憩
+                </h3>
+                <p class="text-gray-600 font-light text-sm leading-relaxed">
+                  找個涼爽的樹蔭或餐廳隨意吃點東西，讓長輩稍作休息。
+                </p>
+              </div>
+            </div>
+
+            <!-- Event 4 -->
+            <div class="grid grid-cols-[1fr_3fr] gap-4">
+              <div
+                class="text-sm tracking-wider font-semibold text-gray-500 pt-1"
+              >
+                14:30 - 15:30
+              </div>
+              <div>
+                <div class="mb-2 flex items-top">
+                  <h3 class="text-xl font-serif font-bold mb-0">
+                    向山遊客中心：午後咖啡
+                  </h3>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=向山行政暨遊客中心"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="ml-3 text-gray-400 hover:text-sage transition-colors shrink-0"
+                    title="在 Google Maps 上查看"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <p class="text-gray-600 font-light text-sm leading-relaxed">
+                  🚗
+                  <strong class="text-charcoal font-medium"
+                    >車程預估：九族至向山遊客中心約 20 分鐘。</strong
+                  ><br />
+                  離開九族後順道造訪清水模建築的向山遊客中心，喝杯咖啡，拍幾張充滿設計感的美照，隨後準備北返。
+                </p>
+              </div>
+            </div>
+
+            <!-- Event 5 -->
+            <div class="grid grid-cols-[1fr_3fr] gap-4">
+              <div class="text-sm tracking-wider font-semibold text-sage pt-1">
+                17:30 - 19:15
+              </div>
+              <div>
+                <h3 class="text-xl font-serif font-bold mb-2">
+                  完美句點：回程晚餐
+                </h3>
+                <p
+                  class="text-gray-600 font-light text-sm leading-relaxed mb-4"
+                >
+                  🚗
+                  <strong class="text-charcoal font-medium"
+                    >車程預估：向山至台中南屯約 1 小時 15 分鐘。</strong
+                  ><br />
+                  下午三點半從南投撤退，回到台中市區吃晚餐。特別挑選南屯區（靠近
+                  74 和交流道）的質感餐廳，吃完去高鐵站只要 10 分鐘，從容不迫：
+                </p>
+                <ul class="space-y-3 text-sm font-light text-gray-700">
+                  <li class="flex items-start group pr-4">
+                    <span class="mr-2 text-sage shrink-0">✦</span>
+                    <span class="flex-1"
+                      ><strong class="font-normal text-charcoal"
+                        >厝秘 (甘肅店)</strong
+                      >
+                      — 裝潢充滿現代東方禪意，私房功夫菜精緻優雅。</span
+                    >
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=厝秘+甘肅店"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="ml-3 text-gray-400 hover:text-sage transition-colors shrink-0"
+                      title="在 Google Maps 上查看"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-4 h-4"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                        />
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="flex items-start group pr-4">
+                    <span class="mr-2 text-sage shrink-0">✦</span>
+                    <span class="flex-1"
+                      ><strong class="font-normal text-charcoal"
+                        >阿秋大肥鵝 (黎明店)</strong
+                      >
+                      — 長輩最愛的台式海鮮與招牌烤鵝。</span
+                    >
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=阿秋大肥鵝+黎明店"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="ml-3 text-gray-400 hover:text-sage transition-colors shrink-0"
+                      title="在 Google Maps 上查看"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-4 h-4"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                        />
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Event 6 -->
+            <div class="grid grid-cols-[1fr_3fr] gap-4">
+              <div
+                class="text-sm tracking-wider font-semibold text-gray-500 pt-1"
+              >
+                19:40 - 20:41
+              </div>
+              <div>
+                <h3 class="text-xl font-serif font-bold mb-2">
+                  歸途：高鐵 152 次
+                </h3>
+                <p class="text-gray-600 font-light text-sm leading-relaxed">
+                  預計 19:40 抵達台中高鐵站。搭乘 20:00 發車的 152 次列車，20:41
+                  就能回到板橋。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 h-[60vh] relative">
+          <img
+            src="https://images.unsplash.com/photo-1585003387496-7ef0cc60267d?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+            class="w-full h-full object-cover rounded-[100px] shadow-2xl"
+          />
+          <div
+            class="absolute -top-6 -left-6 w-32 h-32 bg-dusty-rose rounded-full mix-blend-multiply opacity-60"
+          ></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-4xl mx-auto mt-32 px-6 text-center">
+      <div class="hairline mb-12"></div>
+      <p class="font-serif italic text-xl text-sky-blue mb-2">
+        "Here’s to making beautiful memories."
+      </p>
+      <p class="font-sans text-xs tracking-widest text-gray-400 uppercase">
+        Designed by © 2026 · Odette
+      </p>
+    </footer>
+
+    <!-- 滾動動畫腳本 -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // 1. 自動為目標元素加上 reveal-on-scroll class
+        const targetSelectors = [
+          "main .space-y-8 > div", // 所有單一 Event 區塊
+          "main .flex.items-baseline", // 區塊標題 (01 / 02)
+          "main .hairline", // 分隔線
+          "main .h-\\[60vh\\]", // 兩張配圖
+          "footer", // 頁尾
+        ];
+
+        const elementsToReveal = document.querySelectorAll(
+          targetSelectors.join(", "),
+        );
+        elementsToReveal.forEach((el) => el.classList.add("reveal-on-scroll"));
+
+        // 2. 設定 Intersection Observer 監聽滾動
+        const observerOptions = {
+          root: null,
+          rootMargin: "0px 0px -50px 0px", // 當元素進入畫面底部 50px 時提早觸發
+          threshold: 0.15, // 元素出現 15% 比例時觸發
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-revealed");
+              observer.unobserve(entry.target); // 觸發後解除觀察，確保動畫只播放一次
+            }
+          });
+        }, observerOptions);
+
+        // 3. 開始觀察所有選定的元素
+        elementsToReveal.forEach((el) => observer.observe(el));
+      });
+    </script>
+  </body>
+</html>
